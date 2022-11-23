@@ -9,5 +9,48 @@
         android:id="@+id/fragmentMain"
         android:name="com.robinINC.myapplication.FragmentMain"
         android:label="fragment_main"
-        tools:layout="@layout/fragment_main" />
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_fragmentMain_to_fragmentViewTransaction"
+            app:destination="@id/fragmentViewTransaction" />
+        <action
+            android:id="@+id/action_fragmentMain_to_fragmentViewBalance4"
+            app:destination="@id/fragmentViewBalance" />
+        <action
+            android:id="@+id/action_fragmentMain_to_fragmentChooseRecipient2"
+            app:destination="@id/fragmentChooseRecipient" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentViewTransaction"
+        android:name="com.robinINC.myapplication.FragmentViewTransaction"
+        android:label="fragment_view_transaction"
+        tools:layout="@layout/fragment_view_transaction" />
+    <fragment
+        android:id="@+id/fragmentChooseRecipient"
+        android:name="com.robinINC.myapplication.FragmentChooseRecipient"
+        android:label="fragment_choose_recipient"
+        tools:layout="@layout/fragment_choose_recipient" >
+        <action
+            android:id="@+id/action_fragmentChooseRecipient_to_fragmentSpecifyAmount"
+            app:destination="@id/fragmentSpecifyAmount" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentViewBalance"
+        android:name="com.robinINC.myapplication.FragmentViewBalance"
+        android:label="fragment_view_balance"
+        tools:layout="@layout/fragment_view_balance" />
+    <fragment
+        android:id="@+id/fragmentSpecifyAmount"
+        android:name="com.robinINC.myapplication.FragmentSpecifyAmount"
+        android:label="fragment_specify_amount"
+        tools:layout="@layout/fragment_specify_amount" >
+        <action
+            android:id="@+id/action_fragmentSpecifyAmount_to_fragmentConfirmation"
+            app:destination="@id/fragmentConfirmation" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentConfirmation"
+        android:name="com.robinINC.myapplication.FragmentConfirmation"
+        android:label="fragment_confirmation"
+        tools:layout="@layout/fragment_confirmation" />
 </navigation>
